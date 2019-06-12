@@ -1,13 +1,11 @@
 #include <WiFi.h>
 #include <PubSubClient.h>
-
 #include "DHTesp.h"
 
 #define WIFISSID "Hola" 
 #define PASSWORD "123456789"
 #define TOKEN "A1E-1pAi8BG2CWNxOyBDT0ovjlYZC6IeVm" 
 #define MQTT_CLIENT_NAME "LIFEOFRAM96"
-
 #define TEMP_LABEL "temperature"
 #define HUM_LABEL "humidity"
 #define HI_LABEL "heatindex"
@@ -37,10 +35,8 @@ void getTemperature() {
 
   String temp =String(newValues.temperature);
   temp.toCharArray(temperature,10);
-
   String hum =String(newValues.humidity);
   hum.toCharArray(humidity,10);
-
   String hin =String(heatIndex);
   hin.toCharArray(heatindex,10); 
 }
